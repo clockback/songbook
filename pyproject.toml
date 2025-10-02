@@ -16,4 +16,5 @@ build-backend = "uv_build"
 [dependency-groups]
 dev = [
     "ruff>=0.13.2",
+    "ty>=0.0.1a21",
 ]
