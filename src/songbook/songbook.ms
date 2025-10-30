@@ -14,8 +14,16 @@
 .PP
 
 .pdfpagename blank page
-.pn 1
+
+.ds CH
+
+.bp
+.rs
+
+.ds CH -%-
+
 .P1
+.pn 1
 
 {contents}
 
