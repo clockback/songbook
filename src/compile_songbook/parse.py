@@ -5,7 +5,7 @@ from functools import partial
 from itertools import groupby
 from typing import Self
 
-from songbook.args import SongbookArgs
+from compile_songbook.args import SongbookArgs
 
 type IterLines = Generator[str, None, None]
 

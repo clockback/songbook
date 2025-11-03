@@ -4,8 +4,8 @@ from pathlib import Path
 from tempfile import NamedTemporaryFile
 from typing import IO
 
-from songbook.args import SongbookArgs
-from songbook.parse import iter_lines
+from compile_songbook.args import SongbookArgs
+from compile_songbook.parse import iter_lines
 
 
 def build_template(songbook_args: SongbookArgs, template: IO[str]) -> None:
