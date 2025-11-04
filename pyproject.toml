@@ -1,6 +1,6 @@
 [project]
 name = "compile-songbook"
-version = "0.1.0"
+version = "0.1.1"
 license = "AGPL-3.0-or-later"
 description = "Tool for compiling text files containing lyrics into a single PDF."
 readme = "README.md"
