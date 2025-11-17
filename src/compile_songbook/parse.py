@@ -78,7 +78,7 @@ class SongParagraph:
 
     @classmethod
     def from_text(cls, text: str, /) -> Self:
-        return cls(lines=text.strip().split("\n"))
+        return cls(lines=text.strip("\n ").split("\n"))
 
     def is_chorus_marker(self, args: SongbookArgs) -> bool:
         return len(self.lines) == 1 and self.lines[0] in args.chorus_labels
@@ -89,10 +89,14 @@ class SongParagraph:
 
         if self.is_chorus_marker(args=args):
             yield ".sp"
-            yield ".BI"
+            yield ".B"
             yield self.lines[0]
             yield ".KE"
             return
+
+        # Italicize chorus text (indented with tabs).
+        if all(line.startswith("\t") for line in self.lines):
+            yield ".I"
 
         for line in self.lines:
             yield ".sp"
@@ -132,8 +136,8 @@ class SongInfo:
             raise ValueError("Could not find song body.")
         header_text, body_text = components
         return cls(
-            header=SongHeader.from_text(header_text.strip(), args=args),
-            body=SongBody.from_text(body_text.strip(), args=args),
+            header=SongHeader.from_text(header_text.strip("\n "), args=args),
+            body=SongBody.from_text(body_text.strip("\n "), args=args),
         )
 
     def get_category(self) -> str:

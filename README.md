@@ -47,12 +47,10 @@ These words are all I've got,
 Do you like flamingos?
 I most certainly do not...
 
-Chorus
-
-No I don't like flamingos,
-I don't like them one jot,
-They cause me so much trouble,
-Yes I despise them such a lot...
+	No I don't like flamingos,
+	I don't like them one jot,
+	They cause me so much trouble,
+	Yes I despise them such a lot...
 
 This is the second verse,
 It's no better than the first,
